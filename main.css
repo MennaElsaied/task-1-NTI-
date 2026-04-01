@@ -21,3 +21,80 @@ h4{
 h5{
     color: #2596be;
 }
+/* 🔥 Reset بسيط */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 🧱 body */
+body {
+  border: 1px solid whitesmoke;
+  padding: 40px; /* قللناها */
+}
+
+/* 📱 موبايل */
+@media (max-width: 480px) {
+  body {
+    padding: 15px; /* مهم جدًا */
+  }
+}
+
+/* 🔵 navbar */
+.menna {
+  background-color: #2596be;
+}
+
+/* 🖼 الصورة */
+img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* 📱 صورة موبايل */
+@media (max-width: 768px) {
+  img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* 📚 about section */
+.about-all {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* أهم حاجة 🔥 */
+  padding: 20px;
+  gap: 40px; /* بدل 200 */
+}
+
+/* الأعمدة */
+.about-all > div {
+  width: 45%;
+}
+
+/* 📱 تابلت */
+@media (max-width: 768px) {
+  .about-all > div {
+    width: 100%;
+  }
+}
+
+/* 📝 headings */
+h4 {
+  text-decoration: underline;
+}
+
+h5 {
+  color: #2596be;
+}
