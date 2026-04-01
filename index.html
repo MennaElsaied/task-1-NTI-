@@ -1,11 +1,939 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menna Elsaied - Portfolio (Windows 2000 Edition)</title>
+  <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    
+
+<!-- ═══════════════════════════════════════════
+     BOOT SPLASH SCREEN
+════════════════════════════════════════════ -->
+<div id="boot-screen">
+  <div class="boot-logo">
+    <div class="boot-win-logo">
+      <div class="logo-q1"></div><div class="logo-q2"></div>
+      <div class="logo-q3"></div><div class="logo-q4"></div>
+    </div>
+    <div class="boot-text-block">
+      <div class="boot-ms">Microsoft</div>
+      <div class="boot-win2k">Windows <em>2000</em></div>
+      <div class="boot-edition">Professional</div>
+    </div>
+  </div>
+  <div class="boot-progress-area">
+    <div class="boot-progress-track">
+      <div class="boot-progress-bar" id="boot-bar"></div>
+    </div>
+    <div class="boot-loading-text">Loading portfolio…</div>
+  </div>
+  <div class="boot-footer">
+    Built on NT Technology &nbsp;|&nbsp; Menna Elsaied &copy; 2000
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     DESKTOP
+════════════════════════════════════════════ -->
+<div class="desktop" id="desktop" style="display:none;">
+
+  <!-- ── Marquee (top) ── -->
+  <div class="marquee-bar" aria-hidden="true">
+    <marquee behavior="scroll" direction="left" scrollamount="3">
+      ★ Welcome to Menna Elsaied&apos;s Portfolio ★ &nbsp;&nbsp;&nbsp;
+      Frontend Developer &amp; Web Designer &nbsp;&nbsp;&nbsp;
+      NTI Program Student &nbsp;&nbsp;&nbsp;
+      HTML5 | CSS3 | Bootstrap | JavaScript &nbsp;&nbsp;&nbsp;
+      Available for opportunities! &nbsp;&nbsp;&nbsp;
+      ★ Best viewed in Internet Explorer 6.0 at 800×600 resolution ★
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </marquee>
+  </div>
+
+  <!-- ── Desktop Icons ── -->
+  <div class="desktop-icons" role="list">
+    <button class="desktop-icon" role="listitem" data-opens="about" aria-label="Open About Me">
+      <div class="icon-img icon-computer" aria-hidden="true"></div>
+      <span>My Computer</span>
+    </button>
+    <button class="desktop-icon" role="listitem" data-opens="projects" aria-label="Open Projects">
+      <div class="icon-img icon-folder" aria-hidden="true"></div>
+      <span>My Projects</span>
+    </button>
+    <button class="desktop-icon" role="listitem" data-opens="skills" aria-label="Open Skills">
+      <div class="icon-img icon-notepad" aria-hidden="true"></div>
+      <span>Skills.txt</span>
+    </button>
+    <button class="desktop-icon" role="listitem" data-opens="contact" aria-label="Open Contact">
+      <div class="icon-img icon-mail" aria-hidden="true"></div>
+      <span>Contact Me</span>
+    </button>
+    <button class="desktop-icon" role="listitem" data-opens="recycle" aria-label="Recycle Bin">
+      <div class="icon-img icon-recycle" aria-hidden="true"></div>
+      <span>Recycle Bin</span>
+    </button>
+  </div>
+
+  <!-- ── Windows Area ── -->
+  <div class="windows-area" id="windows-area">
+
+    <!-- ABOUT / My Computer Window -->
+    <div class="win-window" id="about" style="top:30px; left:180px; width:600px;" role="dialog" aria-label="About Me">
+      <div class="win-titlebar">
+        <div class="win-titlebar-left">
+          <div class="win-titlebar-icon icon-computer-sm" aria-hidden="true"></div>
+          <span>About Me — Menna Elsaied.txt - Notepad</span>
+        </div>
+        <div class="win-titlebar-buttons">
+          <button class="win-btn win-minimize" title="Minimize" aria-label="Minimize">_</button>
+          <button class="win-btn win-maximize" title="Maximize/Restore" aria-label="Maximize">□</button>
+          <button class="win-btn win-close"    title="Close"    aria-label="Close">✕</button>
+        </div>
+      </div>
+      <div class="win-menubar" role="menubar">
+        <span role="menuitem" tabindex="0">File</span>
+        <span role="menuitem" tabindex="0">Edit</span>
+        <span role="menuitem" tabindex="0">View</span>
+        <span role="menuitem" tabindex="0">Help</span>
+      </div>
+      <div class="win-body about-body">
+        <div class="about-avatar">
+          <div class="avatar-circle" aria-hidden="true">
+            <span class="avatar-initials">ME</span>
+          </div>
+          <div class="avatar-badge">v1.0.0</div>
+        </div>
+        <div class="about-text">
+          <h1 class="win-h1">Menna Elsaied</h1>
+          <p class="win-subtitle">Frontend Developer &amp; Web Designer</p>
+          <div class="win-divider"></div>
+          <p>Welcome to my personal portfolio! I am a passionate frontend developer specialising in HTML5, CSS3, and modern web technologies. I love crafting clean, responsive, and user-friendly interfaces.</p>
+          <p>Currently pursuing my studies and building real-world projects as part of the <strong>NTI Program</strong> in Cairo, Egypt.</p>
+          <div class="info-grid">
+            <div class="info-row"><span class="info-label">Location:</span><span>Cairo, Egypt</span></div>
+            <div class="info-row"><span class="info-label">Status:</span><span class="status-available">● Available for opportunities</span></div>
+            <div class="info-row"><span class="info-label">Education:</span><span>NTI — Frontend Development Track</span></div>
+            <div class="info-row"><span class="info-label">Languages:</span><span>Arabic (native), English (fluent)</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="win-statusbar">
+        <span>Ready</span>
+        <span>Ln 1, Col 1</span>
+        <span>UTF-8</span>
+      </div>
+    </div>
+
+    <!-- SKILLS Window -->
+    <div class="win-window" id="skills" style="top:360px; left:180px; width:355px;" role="dialog" aria-label="Skills">
+      <div class="win-titlebar">
+        <div class="win-titlebar-left">
+          <div class="win-titlebar-icon icon-notepad-sm" aria-hidden="true"></div>
+          <span>Skills.txt — Notepad</span>
+        </div>
+        <div class="win-titlebar-buttons">
+          <button class="win-btn win-minimize" title="Minimize" aria-label="Minimize">_</button>
+          <button class="win-btn win-maximize" title="Maximize/Restore" aria-label="Maximize">□</button>
+          <button class="win-btn win-close"    title="Close"    aria-label="Close">✕</button>
+        </div>
+      </div>
+      <div class="win-menubar" role="menubar">
+        <span role="menuitem" tabindex="0">File</span>
+        <span role="menuitem" tabindex="0">Edit</span>
+        <span role="menuitem" tabindex="0">Format</span>
+        <span role="menuitem" tabindex="0">View</span>
+        <span role="menuitem" tabindex="0">Help</span>
+      </div>
+      <div class="win-body">
+        <div class="skills-grid">
+          <div class="skill-item">
+            <div class="skill-icon html-icon" aria-hidden="true">H</div>
+            <div class="skill-info">
+              <span class="skill-name">HTML5</span>
+              <div class="skill-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" aria-label="HTML5 95%">
+                <div class="skill-fill" style="width:95%"></div>
+              </div>
+              <span class="skill-pct">95%</span>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-icon css-icon" aria-hidden="true">C</div>
+            <div class="skill-info">
+              <span class="skill-name">CSS3</span>
+              <div class="skill-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="CSS3 90%">
+                <div class="skill-fill" style="width:90%"></div>
+              </div>
+              <span class="skill-pct">90%</span>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-icon js-icon" aria-hidden="true">J</div>
+            <div class="skill-info">
+              <span class="skill-name">JavaScript</span>
+              <div class="skill-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="JavaScript 75%">
+                <div class="skill-fill" style="width:75%"></div>
+              </div>
+              <span class="skill-pct">75%</span>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-icon bs-icon" aria-hidden="true">B</div>
+            <div class="skill-info">
+              <span class="skill-name">Bootstrap</span>
+              <div class="skill-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="Bootstrap 85%">
+                <div class="skill-fill" style="width:85%"></div>
+              </div>
+              <span class="skill-pct">85%</span>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-icon git-icon" aria-hidden="true">G</div>
+            <div class="skill-info">
+              <span class="skill-name">Git &amp; GitHub</span>
+              <div class="skill-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="Git 70%">
+                <div class="skill-fill" style="width:70%"></div>
+              </div>
+              <span class="skill-pct">70%</span>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-icon resp-icon" aria-hidden="true">R</div>
+            <div class="skill-info">
+              <span class="skill-name">Responsive Design</span>
+              <div class="skill-bar" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100" aria-label="Responsive Design 88%">
+                <div class="skill-fill" style="width:88%"></div>
+              </div>
+              <span class="skill-pct">88%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="win-statusbar">
+        <span>6 skills loaded</span>
+        <span>Ln 1, Col 1</span>
+      </div>
+    </div>
+
+    <!-- PROJECTS / Explorer Window -->
+    <div class="win-window" id="projects" style="top:360px; left:550px; width:530px;" role="dialog" aria-label="My Projects">
+      <div class="win-titlebar">
+        <div class="win-titlebar-left">
+          <div class="win-titlebar-icon icon-folder-sm" aria-hidden="true"></div>
+          <span>My Projects — Windows Explorer</span>
+        </div>
+        <div class="win-titlebar-buttons">
+          <button class="win-btn win-minimize" title="Minimize" aria-label="Minimize">_</button>
+          <button class="win-btn win-maximize" title="Maximize/Restore" aria-label="Maximize">□</button>
+          <button class="win-btn win-close"    title="Close"    aria-label="Close">✕</button>
+        </div>
+      </div>
+      <div class="win-menubar" role="menubar">
+        <span role="menuitem" tabindex="0">File</span>
+        <span role="menuitem" tabindex="0">Edit</span>
+        <span role="menuitem" tabindex="0">View</span>
+        <span role="menuitem" tabindex="0">Favorites</span>
+        <span role="menuitem" tabindex="0">Tools</span>
+        <span role="menuitem" tabindex="0">Help</span>
+      </div>
+      <div class="win-toolbar">
+        <button class="toolbar-btn" aria-label="Back">◀ Back</button>
+        <button class="toolbar-btn" aria-label="Forward">▶ Forward</button>
+        <button class="toolbar-btn" aria-label="Up">↑ Up</button>
+        <div class="toolbar-sep"></div>
+        <div class="toolbar-address">
+          <span class="toolbar-label">Address</span>
+          <input class="toolbar-input" type="text" value="C:\Users\Menna\Projects" readonly aria-label="Address bar">
+          <button class="toolbar-go" aria-label="Go">Go</button>
+        </div>
+      </div>
+      <!-- Explorer pane split -->
+      <div class="explorer-layout">
+        <div class="explorer-sidebar">
+          <div class="sidebar-section">
+            <div class="sidebar-title">File and Folder Tasks</div>
+            <ul class="sidebar-links">
+              <li><a href="#" class="sidebar-link">Make a new folder</a></li>
+              <li><a href="#" class="sidebar-link">Publish this folder</a></li>
+              <li><a href="#" class="sidebar-link">Share this folder</a></li>
+            </ul>
+          </div>
+          <div class="sidebar-section">
+            <div class="sidebar-title">Other Places</div>
+            <ul class="sidebar-links">
+              <li><a href="#" class="sidebar-link">My Computer</a></li>
+              <li><a href="#" class="sidebar-link">My Documents</a></li>
+              <li><a href="#" class="sidebar-link">My Network</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="win-body projects-body">
+          <div class="project-card" tabindex="0">
+            <div class="project-icon" aria-hidden="true">📁</div>
+            <div class="project-info">
+              <strong>Portfolio Website</strong>
+              <span>Personal portfolio built with HTML5 &amp; CSS3</span>
+              <div class="project-tags">
+                <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Bootstrap</span>
+              </div>
+            </div>
+            <button class="project-open-btn" onclick="showProjectDialog('Portfolio Website')">Open</button>
+          </div>
+          <div class="project-card" tabindex="0">
+            <div class="project-icon" aria-hidden="true">📁</div>
+            <div class="project-info">
+              <strong>Task Manager App</strong>
+              <span>Frontend task management interface</span>
+              <div class="project-tags">
+                <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span>
+              </div>
+            </div>
+            <button class="project-open-btn" onclick="showProjectDialog('Task Manager App')">Open</button>
+          </div>
+          <div class="project-card" tabindex="0">
+            <div class="project-icon" aria-hidden="true">📁</div>
+            <div class="project-info">
+              <strong>NTI Assignment #1</strong>
+              <span>Responsive layout exercise — NTI Program</span>
+              <div class="project-tags">
+                <span class="tag">HTML</span><span class="tag">CSS</span>
+              </div>
+            </div>
+            <button class="project-open-btn" onclick="showProjectDialog('NTI Assignment #1')">Open</button>
+          </div>
+          <div class="project-card" tabindex="0">
+            <div class="project-icon" aria-hidden="true">📁</div>
+            <div class="project-info">
+              <strong>Login Form UI</strong>
+              <span>Accessible styled login page</span>
+              <div class="project-tags">
+                <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span>
+              </div>
+            </div>
+            <button class="project-open-btn" onclick="showProjectDialog('Login Form UI')">Open</button>
+          </div>
+        </div>
+      </div>
+      <div class="win-statusbar">
+        <span>4 object(s)</span>
+        <span>4 folder(s)</span>
+        <span>Local intranet</span>
+      </div>
+    </div>
+
+    <!-- CONTACT / Outlook Express Window -->
+    <div class="win-window" id="contact" style="top:30px; left:795px; width:295px;" role="dialog" aria-label="Contact Me">
+      <div class="win-titlebar">
+        <div class="win-titlebar-left">
+          <div class="win-titlebar-icon icon-mail-sm" aria-hidden="true"></div>
+          <span>New Message — Outlook Express</span>
+        </div>
+        <div class="win-titlebar-buttons">
+          <button class="win-btn win-minimize" title="Minimize" aria-label="Minimize">_</button>
+          <button class="win-btn win-maximize" title="Maximize/Restore" aria-label="Maximize">□</button>
+          <button class="win-btn win-close"    title="Close"    aria-label="Close">✕</button>
+        </div>
+      </div>
+      <div class="win-menubar" role="menubar">
+        <span role="menuitem" tabindex="0">File</span>
+        <span role="menuitem" tabindex="0">Edit</span>
+        <span role="menuitem" tabindex="0">View</span>
+        <span role="menuitem" tabindex="0">Insert</span>
+        <span role="menuitem" tabindex="0">Tools</span>
+        <span role="menuitem" tabindex="0">Help</span>
+      </div>
+      <div class="win-toolbar contact-toolbar">
+        <button class="toolbar-btn contact-send-btn" id="contact-send-toolbar" aria-label="Send message">📤 Send</button>
+        <div class="toolbar-sep"></div>
+        <button class="toolbar-btn" aria-label="Attach file">📎 Attach</button>
+        <button class="toolbar-btn" aria-label="Check spelling">ABC✓ Spelling</button>
+      </div>
+      <div class="win-body contact-body">
+        <div class="email-header-fields">
+          <div class="email-field">
+            <span class="email-field-label">To:</span>
+            <input type="email" class="win-input email-to" value="menna.elsaied@example.com" readonly aria-label="To">
+          </div>
+          <div class="email-field">
+            <span class="email-field-label">From:</span>
+            <input type="text" class="win-input" id="sender-name" placeholder="Your name" aria-label="Your name">
+          </div>
+          <div class="email-field">
+            <span class="email-field-label">Subject:</span>
+            <input type="text" class="win-input" id="msg-subject" placeholder="RE: Opportunity" aria-label="Subject">
+          </div>
+          <div class="email-field-sep"></div>
+        </div>
+        <textarea class="win-textarea email-body" id="msg-body" rows="7" placeholder="Type your message here…" aria-label="Message body"></textarea>
+        <div class="win-divider"></div>
+        <div class="contact-links">
+          <a href="https://github.com/" target="_blank" rel="noopener" class="contact-link">🌐 GitHub Profile</a>
+          <a href="https://linkedin.com/" target="_blank" rel="noopener" class="contact-link">💼 LinkedIn Profile</a>
+          <a href="mailto:menna.elsaied@example.com" class="contact-link">📧 Direct Email</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- RECYCLE BIN Window (hidden by default) -->
+    <div class="win-window" id="recycle" style="top:200px; left:300px; width:360px; display:none;" role="dialog" aria-label="Recycle Bin">
+      <div class="win-titlebar">
+        <div class="win-titlebar-left">
+          <div class="win-titlebar-icon icon-recycle-sm" aria-hidden="true"></div>
+          <span>Recycle Bin</span>
+        </div>
+        <div class="win-titlebar-buttons">
+          <button class="win-btn win-minimize" title="Minimize" aria-label="Minimize">_</button>
+          <button class="win-btn win-maximize" title="Maximize/Restore" aria-label="Maximize">□</button>
+          <button class="win-btn win-close"    title="Close"    aria-label="Close">✕</button>
+        </div>
+      </div>
+      <div class="win-menubar" role="menubar">
+        <span role="menuitem" tabindex="0">File</span>
+        <span role="menuitem" tabindex="0">Edit</span>
+        <span role="menuitem" tabindex="0">View</span>
+        <span role="menuitem" tabindex="0">Help</span>
+      </div>
+      <div class="win-body recycle-body">
+        <div class="recycle-empty-msg">
+          <div class="recycle-icon-lg" aria-hidden="true">🗑</div>
+          <p>The Recycle Bin is empty.</p>
+          <p class="recycle-hint">Deleted skills and unfinished projects would appear here.</p>
+        </div>
+      </div>
+      <div class="win-statusbar">
+        <span>0 object(s)</span>
+        <span>0 bytes</span>
+      </div>
+    </div>
+
+  </div><!-- /.windows-area -->
+
+  <!-- ═══════════════════════════════════════════
+       START MENU (popup)
+  ════════════════════════════════════════════ -->
+  <div class="start-menu" id="start-menu" role="menu" aria-label="Start menu" style="display:none;">
+    <div class="start-menu-sidebar" aria-hidden="true">
+      <span class="start-sidebar-text">Windows<em>2000</em></span>
+    </div>
+    <div class="start-menu-items">
+      <div class="start-menu-section">
+        <button class="start-menu-item" role="menuitem" data-opens="about">
+          <div class="smi-icon icon-computer-sm"></div>
+          <div class="smi-label">
+            <strong>About Me</strong>
+            <small>Open bio &amp; info</small>
+          </div>
+        </button>
+        <button class="start-menu-item" role="menuitem" data-opens="projects">
+          <div class="smi-icon icon-folder-sm"></div>
+          <div class="smi-label">
+            <strong>My Projects</strong>
+            <small>Browse portfolio work</small>
+          </div>
+        </button>
+        <button class="start-menu-item" role="menuitem" data-opens="skills">
+          <div class="smi-icon icon-notepad-sm"></div>
+          <div class="smi-label">
+            <strong>Skills</strong>
+            <small>View skill levels</small>
+          </div>
+        </button>
+        <button class="start-menu-item" role="menuitem" data-opens="contact">
+          <div class="smi-icon icon-mail-sm"></div>
+          <div class="smi-label">
+            <strong>Contact Me</strong>
+            <small>Outlook Express</small>
+          </div>
+        </button>
+      </div>
+      <div class="start-menu-divider"></div>
+      <div class="start-menu-section">
+        <button class="start-menu-item" role="menuitem" onclick="showAboutDialog()">
+          <div class="smi-icon icon-info-sm"></div>
+          <div class="smi-label"><strong>About Windows 2000</strong></div>
+        </button>
+        <button class="start-menu-item danger-item" role="menuitem" onclick="showShutdownDialog()">
+          <div class="smi-icon icon-power-sm"></div>
+          <div class="smi-label"><strong>Shut Down…</strong></div>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       TASKBAR
+  ════════════════════════════════════════════ -->
+  <div class="taskbar" role="toolbar" aria-label="Taskbar">
+    <button class="start-btn" id="start-btn" aria-haspopup="true" aria-expanded="false" aria-label="Start">
+      <div class="start-logo" aria-hidden="true"></div>
+      <strong>Start</strong>
+    </button>
+    <div class="taskbar-divider" aria-hidden="true"></div>
+    <!-- Quick Launch -->
+    <div class="quick-launch" aria-label="Quick Launch">
+      <button class="ql-btn" data-opens="about"    title="About Me">🖥</button>
+      <button class="ql-btn" data-opens="projects" title="Projects">📁</button>
+      <button class="ql-btn" data-opens="skills"   title="Skills">📝</button>
+      <button class="ql-btn" data-opens="contact"  title="Contact">✉️</button>
+    </div>
+    <div class="taskbar-divider" aria-hidden="true"></div>
+    <!-- Open Windows -->
+    <div class="taskbar-tasks" id="taskbar-tasks" role="group" aria-label="Open windows">
+      <button class="taskbar-task active" data-win="about">
+        <span class="taskbar-task-icon" aria-hidden="true">🖥</span>
+        About Me
+      </button>
+      <button class="taskbar-task" data-win="projects">
+        <span class="taskbar-task-icon" aria-hidden="true">📁</span>
+        My Projects
+      </button>
+      <button class="taskbar-task" data-win="skills">
+        <span class="taskbar-task-icon" aria-hidden="true">📝</span>
+        Skills.txt
+      </button>
+      <button class="taskbar-task" data-win="contact">
+        <span class="taskbar-task-icon" aria-hidden="true">✉️</span>
+        Outlook
+      </button>
+    </div>
+    <!-- System Tray -->
+    <div class="taskbar-tray" role="status" aria-label="System tray">
+      <span class="tray-item" title="Volume" aria-hidden="true">🔊</span>
+      <span class="tray-item" title="Network" aria-hidden="true">🌐</span>
+      <span class="tray-item" title="Battery" aria-hidden="true">🔋</span>
+      <div class="tray-clock" id="tray-clock" aria-live="polite">12:00 AM</div>
+    </div>
+  </div>
+
+</div><!-- /.desktop -->
+
+<!-- ═══════════════════════════════════════════
+     MODAL DIALOGS (overlays)
+════════════════════════════════════════════ -->
+
+<!-- Confirm Send Dialog -->
+<div class="modal-overlay" id="modal-send" style="display:none;" role="dialog" aria-modal="true" aria-label="Message sent confirmation">
+  <div class="win-window dialog-window">
+    <div class="win-titlebar">
+      <div class="win-titlebar-left">
+        <div class="win-titlebar-icon" aria-hidden="true" style="background:#00aa00;"></div>
+        <span>Outlook Express</span>
+      </div>
+      <div class="win-titlebar-buttons">
+        <button class="win-btn win-close" onclick="closeModal('modal-send')" aria-label="Close">✕</button>
+      </div>
+    </div>
+    <div class="win-body dialog-body">
+      <div class="dialog-icon dialog-icon-info" aria-hidden="true">ℹ</div>
+      <div class="dialog-text">
+        <p><strong>Your message has been sent!</strong></p>
+        <p>Thank you for reaching out. Menna will reply within 1–2 business days.</p>
+      </div>
+    </div>
+    <div class="dialog-footer">
+      <button class="win-action-btn" onclick="closeModal('modal-send')">OK</button>
+    </div>
+  </div>
+</div>
+
+<!-- Error Dialog (project not found) -->
+<div class="modal-overlay" id="modal-project" style="display:none;" role="dialog" aria-modal="true" aria-label="Project information">
+  <div class="win-window dialog-window">
+    <div class="win-titlebar">
+      <div class="win-titlebar-left">
+        <div class="win-titlebar-icon icon-folder-sm" aria-hidden="true"></div>
+        <span id="modal-project-title">Open Project</span>
+      </div>
+      <div class="win-titlebar-buttons">
+        <button class="win-btn win-close" onclick="closeModal('modal-project')" aria-label="Close">✕</button>
+      </div>
+    </div>
+    <div class="win-body dialog-body">
+      <div class="dialog-icon dialog-icon-warn" aria-hidden="true">⚠</div>
+      <div class="dialog-text">
+        <p id="modal-project-msg">This project is currently hosted on GitHub.</p>
+        <p>Would you like to open it in Internet Explorer?</p>
+      </div>
+    </div>
+    <div class="dialog-footer">
+      <button class="win-action-btn primary-btn" onclick="closeModal('modal-project')">Yes</button>
+      <button class="win-action-btn" onclick="closeModal('modal-project')">No</button>
+      <button class="win-action-btn" onclick="closeModal('modal-project')">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<!-- About Windows 2000 Dialog -->
+<div class="modal-overlay" id="modal-about-win" style="display:none;" role="dialog" aria-modal="true" aria-label="About Windows 2000">
+  <div class="win-window dialog-window" style="width:340px;">
+    <div class="win-titlebar">
+      <div class="win-titlebar-left">
+        <div class="win-titlebar-icon" aria-hidden="true"></div>
+        <span>About Windows 2000</span>
+      </div>
+      <div class="win-titlebar-buttons">
+        <button class="win-btn win-close" onclick="closeModal('modal-about-win')" aria-label="Close">✕</button>
+      </div>
+    </div>
+    <div class="win-body about-win-body">
+      <div class="about-win-header">
+        <div class="about-win-logo" aria-hidden="true">
+          <div class="logo-q1 sm"></div><div class="logo-q2 sm"></div>
+          <div class="logo-q3 sm"></div><div class="logo-q4 sm"></div>
+        </div>
+        <div>
+          <div class="about-win-title">Microsoft Windows 2000</div>
+          <div class="about-win-subtitle">Portfolio Edition</div>
+        </div>
+      </div>
+      <div class="win-divider"></div>
+      <p>This product is licensed to:</p>
+      <p><strong>Menna Elsaied</strong></p>
+      <p>NTI Frontend Development Program</p>
+      <div class="win-divider"></div>
+      <p class="about-win-small">Version 5.00.2195 (Build 2195.sp4)<br>Copyright © 1981–2000 Microsoft Corp.<br>(Parody — no copyright infringement intended)</p>
+    </div>
+    <div class="dialog-footer">
+      <button class="win-action-btn" onclick="closeModal('modal-about-win')">OK</button>
+    </div>
+  </div>
+</div>
+
+<!-- Shut Down Dialog -->
+<div class="modal-overlay" id="modal-shutdown" style="display:none;" role="dialog" aria-modal="true" aria-label="Shut Down Windows">
+  <div class="win-window dialog-window" style="width:320px;">
+    <div class="win-titlebar">
+      <div class="win-titlebar-left">
+        <div class="win-titlebar-icon" aria-hidden="true"></div>
+        <span>Shut Down Windows</span>
+      </div>
+      <div class="win-titlebar-buttons">
+        <button class="win-btn win-close" onclick="closeModal('modal-shutdown')" aria-label="Close">✕</button>
+      </div>
+    </div>
+    <div class="win-body dialog-body">
+      <div class="dialog-icon shutdown-icon" aria-hidden="true">⏻</div>
+      <div class="dialog-text">
+        <p><strong>What do you want the computer to do?</strong></p>
+        <select class="win-input" style="margin-top:8px; width:100%;" aria-label="Shut down option">
+          <option>Shut down</option>
+          <option>Restart</option>
+          <option>Stand by</option>
+          <option>Log off Menna</option>
+        </select>
+      </div>
+    </div>
+    <div class="dialog-footer">
+      <button class="win-action-btn primary-btn" onclick="triggerShutdown()">OK</button>
+      <button class="win-action-btn" onclick="closeModal('modal-shutdown')">Cancel</button>
+      <button class="win-action-btn" onclick="closeModal('modal-shutdown')">Help</button>
+    </div>
+  </div>
+</div>
+
+<!-- Shutdown screen -->
+<div id="shutdown-screen" style="display:none;">
+  <div class="shutdown-msg">
+    <p>It is now safe to turn off<br>your computer.</p>
+    <p class="shutdown-hint">(Refresh the page to restart)</p>
+  </div>
+</div>
+
+<!-- Right-click context menu -->
+<div class="context-menu" id="ctx-menu" style="display:none;" role="menu" aria-label="Desktop context menu">
+  <button class="ctx-item" role="menuitem" onclick="arrangeIcons()">Arrange Icons By ▶</button>
+  <button class="ctx-item" role="menuitem" onclick="refreshDesktop()">Refresh</button>
+  <div class="ctx-sep"></div>
+  <button class="ctx-item" role="menuitem" onclick="showAboutDialog()">About Windows 2000…</button>
+  <div class="ctx-sep"></div>
+  <button class="ctx-item" role="menuitem">Display Properties…</button>
+</div>
+
+<script>
+/* ─────────────────────────────────────────
+   BOOT SEQUENCE
+───────────────────────────────────────── */
+(function() {
+  const bar = document.getElementById('boot-bar');
+  let w = 0;
+  const interval = setInterval(() => {
+    w += Math.random() * 18 + 4;
+    if (w >= 100) {
+      w = 100;
+      bar.style.width = w + '%';
+      clearInterval(interval);
+      setTimeout(() => {
+        document.getElementById('boot-screen').style.display = 'none';
+        document.getElementById('desktop').style.display = 'flex';
+      }, 600);
+    } else {
+      bar.style.width = w + '%';
+    }
+  }, 180);
+})();
+
+/* ─────────────────────────────────────────
+   LIVE CLOCK
+───────────────────────────────────────── */
+function updateClock() {
+  const now = new Date();
+  let h = now.getHours();
+  const m = String(now.getMinutes()).padStart(2, '0');
+  const ampm = h >= 12 ? 'PM' : 'AM';
+  h = h % 12 || 12;
+  const el = document.getElementById('tray-clock');
+  if (el) el.textContent = h + ':' + m + ' ' + ampm;
+}
+updateClock();
+setInterval(updateClock, 1000);
+
+/* ─────────────────────────────────────────
+   Z-INDEX MANAGER
+───────────────────────────────────────── */
+let topZ = 10;
+function bringToFront(win) {
+  topZ++;
+  win.style.zIndex = topZ;
+  // update taskbar active state
+  document.querySelectorAll('.taskbar-task').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.win === win.id);
+  });
+}
+
+/* ─────────────────────────────────────────
+   WINDOW DRAGGING
+───────────────────────────────────────── */
+document.querySelectorAll('.win-window').forEach(win => {
+  const tb = win.querySelector('.win-titlebar');
+  if (!tb) return;
+  let dragging = false, sx, sy, ol, ot;
+
+  win.addEventListener('mousedown', () => bringToFront(win));
+
+  tb.addEventListener('mousedown', e => {
+    if (e.target.classList.contains('win-btn')) return;
+    if (win.classList.contains('maximized')) return;
+    dragging = true;
+    sx = e.clientX; sy = e.clientY;
+    ol = win.offsetLeft; ot = win.offsetTop;
+    document.body.style.userSelect = 'none';
+  });
+  document.addEventListener('mousemove', e => {
+    if (!dragging) return;
+    win.style.left = (ol + e.clientX - sx) + 'px';
+    win.style.top  = (ot + e.clientY - sy) + 'px';
+  });
+  document.addEventListener('mouseup', () => {
+    dragging = false;
+    document.body.style.userSelect = '';
+  });
+});
+
+/* ─────────────────────────────────────────
+   CLOSE / MINIMIZE / MAXIMIZE
+───────────────────────────────────────── */
+document.querySelectorAll('.win-close').forEach(btn => {
+  const win = btn.closest('.win-window');
+  if (!win || win.closest('.modal-overlay')) return;
+  btn.addEventListener('click', () => {
+    win.style.display = 'none';
+    // remove taskbar active
+    const tb = document.querySelector(`.taskbar-task[data-win="${win.id}"]`);
+    if (tb) tb.classList.remove('active');
+  });
+});
+
+document.querySelectorAll('.win-minimize').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const win = btn.closest('.win-window');
+    ['win-body','win-menubar','win-toolbar','win-statusbar','explorer-layout','contact-toolbar'].forEach(cls => {
+      const el = win.querySelector('.' + cls);
+      if (el) el.style.display = el.style.display === 'none' ? '' : 'none';
+    });
+  });
+});
+
+document.querySelectorAll('.win-maximize').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const win = btn.closest('.win-window');
+    if (win.classList.contains('maximized')) {
+      win.classList.remove('maximized');
+      win.style.left  = win.dataset.origLeft  || '';
+      win.style.top   = win.dataset.origTop   || '';
+      win.style.width = win.dataset.origWidth || '';
+      btn.textContent = '□';
+    } else {
+      win.dataset.origLeft  = win.style.left;
+      win.dataset.origTop   = win.style.top;
+      win.dataset.origWidth = win.style.width;
+      win.classList.add('maximized');
+      btn.textContent = '❐';
+    }
+  });
+});
+
+/* ─────────────────────────────────────────
+   OPEN WINDOW (desktop icons + taskbar)
+───────────────────────────────────────── */
+function openWindow(id) {
+  const win = document.getElementById(id);
+  if (!win) return;
+  win.style.display = '';
+  // restore body if minimized
+  ['win-body','win-menubar','win-toolbar','win-statusbar','explorer-layout','contact-toolbar'].forEach(cls => {
+    const el = win.querySelector('.' + cls);
+    if (el) el.style.display = '';
+  });
+  bringToFront(win);
+}
+
+// Desktop icon single/double click
+document.querySelectorAll('.desktop-icon').forEach(icon => {
+  let clicks = 0, timer;
+  icon.addEventListener('click', () => {
+    clicks++;
+    if (clicks === 1) {
+      timer = setTimeout(() => { clicks = 0; }, 400);
+    } else {
+      clearTimeout(timer);
+      clicks = 0;
+      openWindow(icon.dataset.opens);
+    }
+  });
+});
+
+// Taskbar buttons
+document.querySelectorAll('.taskbar-task').forEach(btn => {
+  btn.addEventListener('click', () => {
+    openWindow(btn.dataset.win);
+  });
+});
+
+// Quick Launch
+document.querySelectorAll('.ql-btn').forEach(btn => {
+  btn.addEventListener('click', () => openWindow(btn.dataset.opens));
+});
+
+// Start menu items
+document.querySelectorAll('.start-menu-item[data-opens]').forEach(item => {
+  item.addEventListener('click', () => {
+    openWindow(item.dataset.opens);
+    closeStartMenu();
+  });
+});
+
+/* ─────────────────────────────────────────
+   START MENU
+───────────────────────────────────────── */
+const startBtn  = document.getElementById('start-btn');
+const startMenu = document.getElementById('start-menu');
+
+function closeStartMenu() {
+  startMenu.style.display = 'none';
+  startBtn.setAttribute('aria-expanded', 'false');
+}
+
+startBtn.addEventListener('click', e => {
+  e.stopPropagation();
+  const open = startMenu.style.display !== 'none';
+  startMenu.style.display = open ? 'none' : 'flex';
+  startBtn.setAttribute('aria-expanded', String(!open));
+});
+
+document.addEventListener('click', e => {
+  if (!startMenu.contains(e.target) && e.target !== startBtn) {
+    closeStartMenu();
+  }
+});
+
+/* ─────────────────────────────────────────
+   MODAL DIALOGS
+───────────────────────────────────────── */
+function closeModal(id) {
+  document.getElementById(id).style.display = 'none';
+}
+
+function showAboutDialog() {
+  closeStartMenu();
+  document.getElementById('modal-about-win').style.display = 'flex';
+}
+function showShutdownDialog() {
+  closeStartMenu();
+  document.getElementById('modal-shutdown').style.display = 'flex';
+}
+function showProjectDialog(name) {
+  document.getElementById('modal-project-title').textContent = name + ' — Open';
+  document.getElementById('modal-project-msg').textContent = '"' + name + '" is hosted on GitHub. Open it in Internet Explorer?';
+  document.getElementById('modal-project').style.display = 'flex';
+}
+function triggerShutdown() {
+  closeModal('modal-shutdown');
+  document.getElementById('desktop').style.display = 'none';
+  document.getElementById('shutdown-screen').style.display = 'flex';
+}
+
+/* Contact Send button */
+document.getElementById('contact-send-toolbar').addEventListener('click', () => {
+  const name    = document.getElementById('sender-name').value.trim();
+  const subject = document.getElementById('msg-subject').value.trim();
+  const body    = document.getElementById('msg-body').value.trim();
+  if (!name || !body) {
+    // Show a little error
+    const overlay = document.createElement('div');
+    overlay.className = 'modal-overlay';
+    overlay.style.display = 'flex';
+    overlay.innerHTML = `
+      <div class="win-window dialog-window">
+        <div class="win-titlebar">
+          <div class="win-titlebar-left"><div class="win-titlebar-icon" style="background:#cc0000;"></div><span>Send Error — Outlook Express</span></div>
+          <div class="win-titlebar-buttons"><button class="win-btn win-close" onclick="this.closest('.modal-overlay').remove()">✕</button></div>
+        </div>
+        <div class="win-body dialog-body">
+          <div class="dialog-icon dialog-icon-error" aria-hidden="true">✕</div>
+          <div class="dialog-text">
+            <p><strong>Cannot send message.</strong></p>
+            <p>Please fill in your name and message before sending.</p>
+          </div>
+        </div>
+        <div class="dialog-footer">
+          <button class="win-action-btn" onclick="this.closest('.modal-overlay').remove()">OK</button>
+        </div>
+      </div>`;
+    document.body.appendChild(overlay);
+    return;
+  }
+  document.getElementById('sender-name').value = '';
+  document.getElementById('msg-subject').value = '';
+  document.getElementById('msg-body').value    = '';
+  document.getElementById('modal-send').style.display = 'flex';
+});
+
+/* ─────────────────────────────────────────
+   RIGHT-CLICK CONTEXT MENU
+───────────────────────────────────────── */
+const ctxMenu = document.getElementById('ctx-menu');
+document.getElementById('desktop').addEventListener('contextmenu', e => {
+  // Don't show on windows
+  if (e.target.closest('.win-window') || e.target.closest('.taskbar') || e.target.closest('.start-menu')) return;
+  e.preventDefault();
+  ctxMenu.style.display = 'block';
+  ctxMenu.style.left = Math.min(e.clientX, window.innerWidth - 180) + 'px';
+  ctxMenu.style.top  = Math.min(e.clientY, window.innerHeight - 120 - 30) + 'px';
+});
+document.addEventListener('click', () => { ctxMenu.style.display = 'none'; });
+
+function arrangeIcons()  { ctxMenu.style.display = 'none'; }
+function refreshDesktop(){ ctxMenu.style.display = 'none'; }
+
+/* Close modals with Escape */
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    document.querySelectorAll('.modal-overlay').forEach(m => m.style.display = 'none');
+    closeStartMenu();
+    ctxMenu.style.display = 'none';
+  }
+});
+</script>
 </body>
 </html>
